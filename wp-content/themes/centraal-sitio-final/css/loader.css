@@ -1,0 +1,99 @@
+#loaderContainer{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #F1F1F1;
+    overflow: hidden;
+    z-index: 9999;
+}
+#loaderContainer .hidden{
+    display: none;
+}
+#loader{
+    background-color: #E63328;
+    width: 33px;
+    height: 33px;
+    position: fixed;
+    top: 45%;
+    left: 49%;
+    border-radius: 50%;
+    z-index: 9999;
+    animation:likearainbow 10s infinite linear;
+    -moz-animation:likearainbow 10s infinite linear;
+    -webkit-animation:likearainbow 10s infinite linear;
+    -o-animation:likearainbow 10s infinite linear;
+}
+#timer{
+    background-color: transparent;
+    border: 5px solid #fff;
+    opacity: .9;
+    border-top: 4px solid transparent;
+    border-left: 3px solid transparent;
+    border-radius: 73px;
+    margin: 0 auto;
+    width: 13px;
+    height: 12px;
+    position: absolute;
+    top: 18%;
+    left: 21%;
+    animation:roundandround 5s infinite linear;
+    -moz-animation:roundandround 5s infinite linear;
+    -webkit-animation:roundandround 5s infinite linear;
+    -o-animation:roundandround5s infinite linear;
+}
+#loading-txt{
+    position: relative;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #666;
+    top: 30px;
+    left: -20px;
+}
+/* Rotar el arcoiris */
+@keyframes roundandround {
+    0% { transform:rotate(0deg); }
+    100% { transform:rotate(-360deg); }
+}
+@-moz-keyframes roundandround {
+    0% { -moz-transform:rotate(0deg); }
+    100% { -moz-transform:rotate(-360deg); }
+}
+@-webkit-keyframes roundandround {
+    0% { -webkit-transform:rotate(0deg); }
+    100% { -webkit-transform:rotate(-360deg); }
+}
+@-o-keyframes roundandround {
+    0% { -o-transform:rotate(0deg); }
+    100% { -o-transform:rotate(-360deg); }
+}
+/* She is */
+@keyframes likearainbow{
+    0%   {background-color: #E63328;}
+    25%  {background:#BA348A;}
+    50%  {background:#00A1D4;}
+    75%  {background:#F4A100;}
+    100% {background:#CAD400;}
+}
+@-moz-keyframes likearainbow{
+    0%   {background-color: #E63328;}
+    25%  {background:#BA348A;}
+    50%  {background:#00A1D4;}
+    75%  {background:#F4A100;}
+    100% {background:#CAD400;}
+}
+@-webkit-keyframes likearainbow{
+    0%   {background-color: #E63328;}
+    25%  {background:#BA348A;}
+    50%  {background:#00A1D4;}
+    75%  {background:#F4A100;}
+    100% {background:#CAD400;}
+}
+@-o-keyframes likearainbow{
+    0%   {background-color: #E63328;}
+    25%  {background:#BA348A;}
+    50%  {background:#00A1D4;}
+    75%  {background:#F4A100;}
+    100% {background:#CAD400;}
+}
