@@ -156,7 +156,9 @@
                 </div>
             </div>
             <div class="table-info">
+                 <form method="get" action="wp-content/uploads/centraaltutiempo.pdf">
                 <button id="comparativo">ver comparativo</button>
+                </form>
             </div>
         </div>
         <div id="responsive-info">
