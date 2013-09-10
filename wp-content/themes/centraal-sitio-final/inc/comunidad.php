@@ -13,7 +13,7 @@
                                 $id_type = 2;
                                 $idPost = get_the_ID();
                                 $array_category = array($id_type);
-                                $args = array('category__and' => $array_category, 'posts_per_page' =>5);
+                                $args = array('category__and' => $array_category,   'post_type' => 'comunidad', 'posts_per_page' =>5, 'orderby'=> 'title', 'order' => 'ASC' );
                                 $myposts = get_posts($args);
                                 $c = 1;
                                 foreach ($myposts as $post): setup_postdata($post);
@@ -29,10 +29,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="<?php echo get_uniq_img(get_the_ID());?>" width='170' height="200" class="image-conocimiento">
+                                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ); ?>" width='170' height="200" class="image-conocimiento">
+ 
                                 </div>
                                 <div class="text-<?php echo $c; ?> personal">
                                     <p><?php the_title();?></p>
+
+                                    <?php $empresa = get_post_meta($post->ID, "empresa", $single = true);  ?>                                
+                                        <?php if($empresa !== '') { ?>
+                                    <p><?php echo $empresa;?></p>
+                                    <?php } else { }?> 
+
+
                                         <?php $twitter = get_post_meta($post->ID, "twitter", $single = true);  ?>                                
                                         <?php if($twitter !== '') { ?>
                                     <a href="http://twitter.com/<?php echo $twitter; ?>" target="_blank">@<?php echo $twitter;?></a>
@@ -54,8 +62,12 @@
                                     $numPosts  = $catObj->count;
                                     $numPages =  round($numPosts/5);
                                         echo '<div class="paginate">';
-                                    for($i=1; $i<= $numPages; $i++){
-                                        echo "<a class='pagina dot-page' data-pagina='".$i."'></a>";
+                                    for($i=1; $i<= $numPages+1; $i++){
+                                        echo "<a class='pagina dot-page";
+                                        if ($i==1) {
+                                            echo " active";
+                                        }
+                                        echo "' data-pagina='".$i."'></a>";
                                     }
                                     echo '</div>';
                                 ?>

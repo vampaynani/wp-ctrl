@@ -3,7 +3,7 @@
   include('../../../../../wp-load.php');
   if( isset( $_POST['page'] ) ){
 
-    $args = array( 'category_name' => 'comunidad', 'posts_per_page' => 5, 'paged' => $_POST['page'] );
+    $args = array( 'category_name' => 'comunidad', 'post_type' => 'comunidad','posts_per_page' => 5, 'paged' => $_POST['page'] ,'orderby'=> 'title', 'order' => 'ASC' );
     $loop = new WP_Query( $args );
     $attachments = get_posts($args);
 

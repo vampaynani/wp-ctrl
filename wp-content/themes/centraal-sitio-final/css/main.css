@@ -4379,6 +4379,12 @@ div.moving {
   float: left;
   list-style-type: none;
 }
+
+#conocimiento-one .conocimiento .ul-conocimiento .item-conocimiento .back{
+
+height: 190px;
+overflow: hidden;
+}
 /* line 44, ../sass/comunidad.scss */
 #conocimiento-one .conocimiento .ul-conocimiento .item-conocimiento .image-conocimiento {
   -webkit-transition: opacity "1s" ease;
@@ -4477,6 +4483,7 @@ div.moving {
 /* line 120, ../sass/comunidad.scss */
 #conocimiento-one .conocimiento .ul-conocimiento .item-conocimiento .personal p {
   color: white;
+  margin: 5px;
 }
 /* line 123, ../sass/comunidad.scss */
 #conocimiento-one .conocimiento .ul-conocimiento .item-conocimiento .personal a {
