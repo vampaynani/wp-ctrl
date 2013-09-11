@@ -4309,6 +4309,9 @@ div.moving {
   height: 100%;
 }
 
+#carousel-conocenos{
+  overflow-y: hidden;
+}
 /* line 14, ../sass/comunidad.scss */
 #conocimiento-one {
   width: 100%;
